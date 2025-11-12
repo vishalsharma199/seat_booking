@@ -6,11 +6,13 @@ const cron = require('node-cron');
 
 async function bookSeatVizmo() {
   // Launch Chrome in visible mode, with a slight slowdown for debugging
-  const browser = await puppeteer.launch({ 
-    executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', // Path to Chrome
-    headless: false,
-    slowMo: 50
-  });
+  // const browser = await puppeteer.launch({ 
+  //   executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', // Path to Chrome
+  //   headless: false,
+  //   slowMo: 50
+  // });
+    const browser = await puppeteer.launch({ headless: false, slowMo: 50 });
+  // const page = await browser.newPage();
   const page = await browser.newPage();
 
   try {
